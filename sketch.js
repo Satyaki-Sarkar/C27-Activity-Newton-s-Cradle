@@ -25,18 +25,18 @@ function setup() {
 	roof=new Roof();
 
 	bob1=new Bob(600,220,20);
-	bob2=new Bob(580,220,20);
-	bob3=new Bob(720,220,20);
-	bob4=new Bob(560,220,20);
-	bob5=new Bob(740,220,20);
-	bob6=new Bob(540,220,20);
+	bob2=new Bob(560,220,20);
+	bob3=new Bob(740,220,20);
+	bob4=new Bob(520,220,20);
+	bob5=new Bob(780,220,20);
+	bob6=new Bob(480,220,20);
 	
-	constrain1=new ConstrainBody(bob1.body,roof.body,0,200);
-	constrain2=new ConstrainBody(bob2.body,roof.body,-20,200);
-	constrain3=new ConstrainBody(bob3.body,roof.body,20,200);
-	constrain4=new ConstrainBody(bob4.body,roof.body,-40,200);
-	constrain5=new ConstrainBody(bob5.body,roof.body,40,200);
-	constrain6=new ConstrainBody(bob6.body,roof.body,-60,200);
+	constrain1=new ConstrainBody(bob1.body,roof.body,0,0);
+	constrain2=new ConstrainBody(bob2.body,roof.body,-40,0);
+	constrain3=new ConstrainBody(bob3.body,roof.body,40,0);
+	constrain4=new ConstrainBody(bob4.body,roof.body,-80,0);
+	constrain5=new ConstrainBody(bob5.body,roof.body,80,0);
+	constrain6=new ConstrainBody(bob6.body,roof.body,-120,0);
 
 
 	Engine.run(engine);
@@ -69,10 +69,10 @@ function draw() {
 }
 
 function keyPressed(){
-	if(keyCode= UP_ARROW){
+	if(keyCode===UP_ARROW){
 		var options={
-			x:-85,
-			y:85
+			x:-120,
+			y:0
         }
 		Matter.Body.applyForce(bob6.body,bob6.body.position,options)
 	}

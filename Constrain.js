@@ -6,7 +6,7 @@ class ConstrainBody {
             stiffness : 1,
             bodyA : bodyA,
             bodyB : bodyB,
-            length : 100,
+            length : 300,
             pointB:{x:this.offsetX, y:this.offsetY}
         }
 
@@ -20,7 +20,7 @@ class ConstrainBody {
         var pointA=this.chain.bodyA.position;
         var pointB=this.chain.bodyB.position;
 
-        line(pointA.x,pointA.y,pointB.x,pointB.y);
+        line(pointA.x,pointA.y,pointB.x+this.offsetX,pointB.y+this.offsetY);
     }
 
 }
